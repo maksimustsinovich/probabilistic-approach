@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.ustsinovich.probabilisticapproach.controller.MainController">
+    <AreaChart fx:id="acProbability" layoutX="20.0" layoutY="90.0" legendVisible="false" prefHeight="500.0" prefWidth="600.0">
+        <xAxis>
+            <NumberAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis side="LEFT" />
+        </yAxis>
+    </AreaChart>
+    <ToolBar prefHeight="40.0" prefWidth="640.0">
+        <Label text="Deviation 1:" />
+        <Spinner fx:id="spnDeviation1" amountToStepBy="1.0" initialValue="3.0" max="10.0" min="1.0" prefWidth="70.0" />
+        <Label text="Mean 1:" />
+        <Spinner fx:id="spnMean1" amountToStepBy="1.0" initialValue="1.0" max="10.0" min="1.0" prefWidth="70.0" />
+        <Label text="Probability:" />
+        <Spinner fx:id="spnProbability1" amountToStepBy="0.1" initialValue="0.8" max="1.0" min="0.1" prefHeight="25.0" prefWidth="70.0" />
+        <Button fx:id="btnRun" mnemonicParsing="false" onAction="#onBtnRunAction" text="Run!" />
+    </ToolBar>
+    <ToolBar layoutY="40.0" prefHeight="40.0" prefWidth="640.0">
+        <Label text="Deviation 2:" />
+        <Spinner fx:id="spnDeviation2" amountToStepBy="1.0" initialValue="3.0" max="10.0" min="1.0" prefWidth="70.0" />
+        <Label text="Mean 2:" />
+        <Spinner fx:id="spnMean2" amountToStepBy="1.0" initialValue="4.0" max="10.0" min="1.0" prefWidth="70.0" />
+    </ToolBar>
+    <ToolBar layoutY="600.0" prefHeight="40.0" prefWidth="640.0">
+        <Label text="False alarm:"/>
+        <TextField editable="false" prefWidth="70.0" text="0%" fx:id="tfFalseAlarm"/>
+        <Label text="Missing:"/>
+        <TextField editable="false" prefWidth="70.0" text="0%" fx:id="tfMissing"/>
+        <Label text="Total classification error:"/>
+        <TextField editable="false" prefWidth="70.0" text="0%" fx:id="tfTotalClassificationError"/>
+    </ToolBar>
+</Pane>
