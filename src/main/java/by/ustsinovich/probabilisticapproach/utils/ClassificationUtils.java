@@ -77,7 +77,7 @@ public class ClassificationUtils {
 
     public static int findSeparatorIndex(List<Double> y1Values, List<Double> y2Values, List<Double> xValues) {
         boolean firstIsBigger = y1Values.getFirst() > y2Values.getFirst();
-        int separatorI = -1;
+        int separatorI = 0;
 
         for (int i = 0; i < xValues.size(); i++) {
             if ((firstIsBigger && y2Values.get(i) >= y1Values.get(i)) ||
